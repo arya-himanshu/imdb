@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IndexPageComponent } from './index-page/index-page.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { MovieserviceService } from './service/movie/movieservice.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MovieserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
